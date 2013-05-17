@@ -1,0 +1,14 @@
+{
+  "name": "SoundStation",
+  "description": "",
+  "version": "0.0.1",
+  "main": "./server.js",
+  "dependencies": {
+    "derby": "*",
+    "express": "3.x",
+    "gzippo": ">=0.2.0",
+    "lame": "*",
+    "speaker": "*"
+  },
+  "private": true
+}
