@@ -8,7 +8,9 @@
     "express": "3.x",
     "gzippo": ">=0.2.0",
     "lame": "*",
-    "speaker": "*"
+    "speaker": "*",
+    "async": "0.2.8",
+    "musicmetadata": "*"
   },
   "private": true
 }

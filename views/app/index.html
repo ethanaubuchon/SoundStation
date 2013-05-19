@@ -5,5 +5,20 @@
   <ui:connectionAlert>
 
 <Body:>
-  <h1>Welcome</h1>
-  <p>Home page will display current queue</p>
+  <h1>Home</h1>
+  <p>Rendering a list of songs.</p>
+
+  <ul>
+    {{#each songs}}
+      <li>{{album}} --- {{title}} --- {{artist}} --- {{songPath}}</li>
+    {{/}}
+  </ul>
+
+  {{#unless hideFooter}}
+    {{#with meta}}
+      <small>
+        Check out SongStation on&nbsp;
+        <a href="https://github.com/ethanaubuchon/SoundStation">Github</a>
+      </small>
+    {{/}}
+  {{/}}
