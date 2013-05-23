@@ -41,9 +41,21 @@
   <div class="container">
     <div class="hero-unit">
       <h1>SoundStation</h1>
-      <p>Currently playing: {{currentSong.title}} --- {{currentSong.artist}} --- 
-      {{currentSong.songPath}}</p>
-      <p>The current queue would be displayed here.</p>
+
+      {{#if currentSong}}
+        <p><strong>Currently playing:</strong></p>
+        <p>{{currentSong.title}} --- {{currentSong.artist}} --- 
+        {{currentSong.songPath}}</p>
+      {{/}}
+
+      {{#if queue}}
+        <p><strong>Queue:</strong></p>
+        <ul>
+          {{#each queue}}
+            <li><a href="/play/{{id}}">{{album}} --- {{title}} --- {{artist}} --- {{songPath}}</a></li>
+          {{/}}
+        </ul>
+      {{/}}
     </div>
 
     <ul>
