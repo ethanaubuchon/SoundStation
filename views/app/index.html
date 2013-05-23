@@ -50,8 +50,8 @@
       {#if queue}
         <p><strong>Queue:</strong></p>
         <ul>
-          {#each queue}
-            <li><a href="/play/{{id}}">{album} --- {title} --- {artist} --- {songPath}</a></li>
+          {#each addPosition(queue)}
+            <li>{title} by {artist} in {album} - <a href="/remove/{position}">Remove</a></li>
           {/}
         </ul>
       {/}
