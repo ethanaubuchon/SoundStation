@@ -58,11 +58,30 @@
       {{/}}
     </div>
 
-    <ul>
-      {{#each songs}}
-        <li><a href="/play/{{id}}">{{album}} --- {{title}} --- {{artist}} --- {{songPath}}</a></li>
-      {{/}}
-    </ul>
+    <table class="table table-condensed table-hover">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Artist</th>
+          <th>Album</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each songs}}
+          <tr>
+            <td>{{title}}</td>
+            <td>{{artist}}</td>
+            <td>{{album}}</td>
+            <td>
+              <a href="/play/{{id}}">Play</a>&nbsp;-&nbsp;
+              <a href="/playnow/{{id}}">Play now</a>
+            </td>
+          </tr>
+        {{/}}
+      </tbody>
+    </table>
+      
 
     <footer>
       <small>
