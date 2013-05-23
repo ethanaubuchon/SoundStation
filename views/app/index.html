@@ -42,19 +42,19 @@
     <div class="hero-unit">
       <h1>SoundStation</h1>
 
-      {{#if currentSong}}
+      {#if currentSong}
         <p><strong>Currently playing:</strong></p>
-        <p>{{currentSong.title}}, by {{currentSong.artist}} in {{currentSong.album}}</p>
-      {{/}}
+        <p>{currentSong.title}, by {currentSong.artist} in {currentSong.album}</p>
+      {/}
 
-      {{#if queue}}
+      {#if queue}
         <p><strong>Queue:</strong></p>
         <ul>
-          {{#each queue}}
-            <li><a href="/play/{{id}}">{{album}} --- {{title}} --- {{artist}} --- {{songPath}}</a></li>
-          {{/}}
+          {#each queue}
+            <li><a href="/play/{{id}}">{album} --- {title} --- {artist} --- {songPath}</a></li>
+          {/}
         </ul>
-      {{/}}
+      {/}
     </div>
 
     <table class="table table-condensed table-hover">
@@ -67,11 +67,11 @@
         </tr>
       </thead>
       <tbody>
-        {{#each songs}}
+        {#each songs}
           <tr>
-            <td>{{title}}</td>
-            <td>{{artist}}</td>
-            <td>{{album}}</td>
+            <td>{title}</td>
+            <td>{artist}</td>
+            <td>{album}</td>
             <td>
               <a href="/play/{{id}}">Play</a>&nbsp;-&nbsp;
               <a href="/playnow/{{id}}">Play now</a>
