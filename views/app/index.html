@@ -49,6 +49,12 @@
           {#if currentSong.artist}, by {currentSong.artist}{/}
           {#if currentSong.album}&nbsp;in {currentSong.album}{/}
         </p>
+        {#if playing}
+          <a href="/stop">Stop</a>
+        {else}
+          <a href="/playnow/{{currentSong.id}}">Play</a>
+        {/}
+
       {/}
 
       {#if queue}
