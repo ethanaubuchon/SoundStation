@@ -66,6 +66,8 @@
               {title}
               {#if artist}, by {artist}{/}
               {#if album}&nbsp;in {album}{/}
+              &nbsp;- <a href="/moveup/{position}">Up</a>
+              &nbsp;- <a href="/movedown/{position}">Down</a>
               &nbsp;- <a href="/remove/{position}">Remove</a></li>
           {/}
         </ul>
@@ -108,6 +110,7 @@
 
   <script src="lib/jquery-1.9.1.min.js"></script>
   <script src="lib/bootstrap.min.js"></script>
+  <script type="text/javascript" src="handlebarhelper.js"></script>
 
 
 <Tail:>
