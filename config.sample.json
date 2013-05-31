@@ -1,3 +1,5 @@
 {
-  "directories": ["/path/to/dir", "path/to/another"]
+  "directories": ["/path/to/dir", "path/to/another"],
+  "secret": "Your Session Secret",
+  "pin": "1234"
 }
