@@ -1,6 +1,8 @@
 <import: src="home">
 <import: src="artists">
-<import: src="artist">
+<import: src="albums">
+<import: src="genres">
+<import: src="songs">
 
 <Root:>
   <html lang="en">
@@ -29,6 +31,7 @@
           <ul class="nav">
             <li class="{{homePage}}"><a href="/">All Songs</a></li>
             <li class="{{artistPage}}"><a href="/artists/">Artists</a></li>
+            <li class="{{albumPage}}"><a href="/albums/">Albums</a></li>
             <li class="{{genrePage}}"><a href="/genres/">Genres</a></li>
           </ul>
           {#if isAdmin}

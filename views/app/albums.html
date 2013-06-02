@@ -1,0 +1,18 @@
+<Title:>
+  SoundStation - Albums
+
+<Body:>
+  <table class="table table-condensed table-hover">
+    <thead>
+      <tr>
+        <th>Album</th>
+      </tr>
+    </thead>
+    <tbody>
+      {#each albums}
+        <tr>
+          <td><a href="/album/{id}">{name}</a></td>
+        </tr>
+      {/}
+    </tbody>
+  </table>

@@ -1,0 +1,18 @@
+<Title:>
+  SoundStation - Genres
+
+<Body:>
+  <table class="table table-condensed table-hover">
+    <thead>
+      <tr>
+        <th>Genre</th>
+      </tr>
+    </thead>
+    <tbody>
+      {#each genres}
+        <tr>
+          <td><a href="/genre/{id}">{name}</a></td>
+        </tr>
+      {/}
+    </tbody>
+  </table>

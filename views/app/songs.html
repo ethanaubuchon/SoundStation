@@ -8,6 +8,7 @@
         <th>Title</th>
         <th>Artist</th>
         <th>Album</th>
+        <th>Genre</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -17,6 +18,7 @@
           <td>{title}</td>
           <td>{artist}</td>
           <td>{album}</td>
+          <td>{genre}</td>
           <td>
             <a class="prevent-default" href="/play/{{id}}">Add</a>
             {#if isAdmin}
