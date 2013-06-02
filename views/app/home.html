@@ -1,0 +1,29 @@
+<Title:>
+  SoundStation - Home
+
+<Body:>
+  <table class="table table-condensed table-hover">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Album</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {#each songs}
+        <tr>
+          <td>{title}</td>
+          <td>{artist}</td>
+          <td>{album}</td>
+          <td>
+            <a class="prevent-default" href="/play/{{id}}">Add</a>
+            {#if isAdmin}
+              &nbsp;-&nbsp;<a class="prevent-default" href="/playnow/{{id}}">Play</a>
+            {/}
+          </td>
+        </tr>
+      {/}
+    </tbody>
+  </table>

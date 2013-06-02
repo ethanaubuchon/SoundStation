@@ -1,19 +1,21 @@
+<import: src="home">
+<import: src="artists">
+<import: src="artist">
+
 <Root:>
   <html lang="en">
 
 <Title:>
-  SoundStation - Home
+  SoundStation
 
 <Head:>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
 
 <Header:>
   <body>
   <ui:connectionAlert>
-
-<Body:>
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
@@ -25,16 +27,16 @@
         <a class="brand" href="#">SoundStation</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li class="active"><a href="#">All Songs</a></li>
-            <li><a href="#artists">Artists</a></li>
-            <li><a href="#genres">Genres</a></li>
+            <li class="{{homePage}}"><a href="/">All Songs</a></li>
+            <li class="{{artistPage}}"><a href="/artists/">Artists</a></li>
+            <li class="{{genrePage}}"><a href="/genres/">Genres</a></li>
           </ul>
           {#if isAdmin}
-            <form method="post" class="navbar-form pull-right" id="logout" action="/logout/">
+            <form method="post" class="navbar-form pull-right" id="logout" action="/logout">
               <button type="submit" class="btn">Sign Out</button>
             </form>
           {else}
-            <form method="post" class="navbar-form pull-right" id="login" action="/login/">
+            <form method="post" class="navbar-form pull-right" id="login" action="/login">
               <input name="pin" id="pin" class="span2" type="password" placeholder="Pin">
               <button type="submit" class="btn">Sign In</button>
             </form>
@@ -57,12 +59,12 @@
         </p>
         {#if isAdmin}
           {#if playing}
-            <a href="/stop">Stop</a>
+            <a class="prevent-default" href="/stop">Stop</a>
           {else}
-            <a href="/playnow/{{currentSong.id}}">Play</a>
+            <a class="prevent-default" href="/playnow/{{currentSong.id}}">Play</a>
           {/}
           &nbsp;-&nbsp;
-          <a href="/next">Next</a>
+          <a class="prevent-default" href="/next">Next</a>
         {/}
       {/}
 
@@ -75,9 +77,9 @@
               {#if artist}, by {artist}{/}
               {#if album}&nbsp;in {album}{/}
               {#if isAdmin}
-                &nbsp;- <a href="/moveup/{position}">Up</a>
-                &nbsp;- <a href="/movedown/{position}">Down</a>
-                &nbsp;- <a href="/remove/{position}">Remove</a>
+                &nbsp;- <a class="prevent-default" href="/moveup/{position}">Up</a>
+                &nbsp;- <a class="prevent-default" href="/movedown/{position}">Down</a>
+                &nbsp;- <a class="prevent-default" href="/remove/{position}">Remove</a>
               {/}
             </li>
           {/}
@@ -85,44 +87,19 @@
       {/}
     </div>
 
-    <table class="table table-condensed table-hover">
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Artist</th>
-          <th>Album</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        {#each songs}
-          <tr>
-            <td>{title}</td>
-            <td>{artist}</td>
-            <td>{album}</td>
-            <td>
-              <a href="/play/{{id}}">Add</a>
-              {#if isAdmin}&nbsp;-&nbsp;<a href="/playnow/{{id}}">Play</a>{/}
-            </td>
-          </tr>
-        {{/}}
-      </tbody>
-    </table>
-      
-
+<Tail:>
     <footer>
       <small>
         SoundStation on&nbsp;
-        <a class="outbound" href="https://github.com/ethanaubuchon/SoundStation">Github</a>
+        <a href="https://github.com/ethanaubuchon/SoundStation">Github</a>
       </small>
     </footer>
 
   </div><!-- /container -->
 
-  <script src="lib/jquery-1.9.1.min.js"></script>
-  <script src="lib/bootstrap.min.js"></script>
-  <script src="js/ui.js"></script>
+  <script src="/lib/jquery-1.9.1.min.js"></script>
+  <script src="/lib/bootstrap.min.js"></script>
+  <script src="/js/ui.js"></script>
 
-<Tail:>
   </body>
   </html>

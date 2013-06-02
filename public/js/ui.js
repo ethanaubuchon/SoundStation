@@ -8,13 +8,14 @@ $(document).click(function(event) {
     // SoundStation and should proceed normally
     target = $(event.target);
 
-    if (target.is('a') && !target.hasClass('outbound')) {
+    var href = target.attr('href');
+
+    if (target.is('a') && target.hasClass('prevent-default')) {
       event.preventDefault();
 
       // Also prevent the user from clicking too quickly
       var now = new Date().getTime();
       if (now - lastClick > 400) {
-        var href = target.attr('href');
         // Perform ajax request
         $.ajax({
           url: href,
@@ -25,4 +26,9 @@ $(document).click(function(event) {
 
       return false;
     }
+
+    // Force re-rendering the page entirely if clicking on links to pages that 
+    // render different templates. Otherwise Derby will render with the old template
+    if (target.is('a'))
+      window.location.href = href;
 });
