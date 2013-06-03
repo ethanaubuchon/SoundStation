@@ -70,6 +70,12 @@
           {/}
           &nbsp;-&nbsp;
           <a class="prevent-default" href="/next">Next</a>
+          &nbsp;-&nbsp;
+          {#if shuffle}
+            <a class="prevent-default" href="/stopShuffle">Stop Shuffle</a>
+          {else}
+            <a class="prevent-default" href="/shuffle">Shuffle</a>
+          {/}
         {/}
       {/}
 
