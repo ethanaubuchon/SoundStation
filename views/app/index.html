@@ -61,6 +61,8 @@
           {#if currentSong.album}&nbsp;in {currentSong.album}{/}
         </p>
         {#if isAdmin}
+          <a class="prevent-default" href="/prev">Previous</a>
+          &nbsp;-&nbsp;
           {#if playing}
             <a class="prevent-default" href="/stop">Stop</a>
           {else}
