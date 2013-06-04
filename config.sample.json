@@ -1,5 +1,6 @@
 {
   "directories": ["/path/to/dir", "path/to/another"],
   "secret": "Your Session Secret",
-  "pin": "1234"
+  "pin": "1234",
+  "enableVotingOrder": true 
 }

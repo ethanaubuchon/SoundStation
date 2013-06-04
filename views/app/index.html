@@ -87,6 +87,17 @@
               {title}
               {#if artist}, by {artist}{/}
               {#if album}&nbsp;in {album}{/}
+              {#if equal(votes, 1)}
+                &nbsp;- 1 Vote
+              {else}
+                &nbsp;- {votes} Votes
+              {/}
+              {#if hasVoted(voteIDs, sessionID)}
+                &nbsp;- Voted
+              {else}
+                &nbsp;- <a class="prevent-default" href="/vote/{position}">Vote</a>
+              {/}
+
               {#if isAdmin}
                 &nbsp;- <a class="prevent-default" href="/moveup/{position}">Up</a>
                 &nbsp;- <a class="prevent-default" href="/movedown/{position}">Down</a>
