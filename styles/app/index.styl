@@ -1,1 +1,103 @@
 @import "../base";
+
+body {
+  padding-top: 60px;
+}
+.navbar .btn {
+  margin-left: 10px;
+}
+.hero-unit {
+  font-size: 100%;
+}
+.hero-unit h1 {
+  font-size: 40px;
+}
+
+.btn-group .song-attr, 
+.btn-group .song-attr-medium,
+.btn-group .song-attr-small {
+  float: left;
+  display: block;
+  word-wrap: break-word;
+  overflow: hidden;
+  color: #000;
+  text-align: center;
+  font-weight: normal;
+  height: 40px;
+}
+.btn-group .song-attr {
+  line-height: 20px;
+  width: 180px;
+}
+.btn-group .song-attr-medium {
+  line-height: 40px;
+  width: 50px;
+}
+.btn-group .song-attr-small {
+  line-height: 40px;
+  width: 30px;
+}
+.btn-group button.song-attr-small {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 50px;
+  width: 30px;
+}
+
+.admin-options i {
+  margin-right: 15px;
+}
+
+.dropdown-menu.right {
+  left: auto;
+  right: 0px;
+}
+.dropdown-menu.right::before {
+  left: auto !important;
+  right: 9px;
+}
+.dropdown-menu.right::after {
+  left: auto !important;
+  right: 10px;
+}
+
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+  .navbar .btn {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 695px) {
+  .btn-group .song-attr{
+    font-size: 11px;
+    width: 110px;
+  }
+  .btn-group .song-attr-medium {
+    font-size: 11px;
+    width: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .btn-group .song-attr-small {
+    font-size: 11px;
+    width: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .btn-group button.song-attr-small {
+    width: 25px;
+  }
+}
+
+@media (min-width: 980px) {
+    tr.visible-desktop {
+        display:table-row !important;
+    }
+    td.visible-desktop,
+    th.visible-desktop {
+        display:table-cell !important;
+    }
+}

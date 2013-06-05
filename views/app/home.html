@@ -2,23 +2,25 @@
   SoundStation - Home
 
 <Body:>
-  <table class="table table-condensed table-hover">
+  <table class="table table-hover table-striped">
     <thead>
       <tr>
+        <th>#</th>
         <th>Title</th>
         <th>Artist</th>
-        <th>Album</th>
-        <th>Genre</th>
+        <th class="visible-desktop">Album</th>
+        <th class="visible-desktop">Genre</th>
         <th>Actions</th>
       </tr>
     </thead>
     <tbody>
       {#each songs}
         <tr>
+          <td>{{id}}</td>
           <td>{title}</td>
           <td>{artist}</td>
-          <td>{album}</td>
-          <td>{genre}</td>
+          <td class="visible-desktop">{album}</td>
+          <td class="visible-desktop">{genre}</td>
           <td>
             <a class="prevent-default" href="/play/{{id}}">Add</a>
             {#if isAdmin}

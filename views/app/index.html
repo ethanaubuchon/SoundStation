@@ -52,15 +52,26 @@
   <div class="container">
     <div class="hero-unit">
       <h1>SoundStation</h1>
-
+      <br />
       {#if currentSong}
-        <p><strong>Currently playing:</strong></p>
-        <p>
-          {currentSong.title}
-          {#if currentSong.artist}, by {currentSong.artist}{/}
-          {#if currentSong.album}&nbsp;in {currentSong.album}{/}
-        </p>
+        <p class="lead"><strong>Currently playing:</strong></p>
+        <div class="btn-toolbar">
+          <div class="btn-group">
+            <a class="btn disabled song-attr prevent-default" href="#">
+              {currentSong.title}<br />
+              {#if currentSong.artist}{currentSong.artist}{/}
+            </a>
+            <a class="btn disabled song-attr-medium prevent-default" href="#">
+              {#if equal(votes, 1)}
+                &nbsp;1 Vote
+              {else}
+                &nbsp;{votes} Votes
+              {/}
+            </a>
+          </div>
+        </div>
         {#if isAdmin}
+          <p>
           <a class="prevent-default" href="/prev">Previous</a>
           &nbsp;-&nbsp;
           {#if playing}
@@ -76,36 +87,63 @@
           {else}
             <a class="prevent-default" href="/shuffle">Shuffle</a>
           {/}
+          </p>
         {/}
       {/}
 
       {#if queue}
-        <p><strong>Queue:</strong></p>
-        <ul>
+        <p class="lead"><strong>Queue:</strong></p>
           {#each addPosition(queue)}
-            <li>
-              {title}
-              {#if artist}, by {artist}{/}
-              {#if album}&nbsp;in {album}{/}
-              {#if equal(votes, 1)}
-                &nbsp;- 1 Vote
-              {else}
-                &nbsp;- {votes} Votes
-              {/}
+          <div class="btn-toolbar">
+            <div class="btn-group">
+              <a class="btn disabled song-attr prevent-default" href="#">
+                {title}<br />
+                {#if artist}{artist}{/}
+              </a>
+              <a class="btn disabled song-attr-medium prevent-default" href="#">
+                {#if equal(votes, 1)}
+                  &nbsp;1 Vote
+                {else}
+                  &nbsp;{votes} Votes
+                {/}
+              </a>
               {#if hasVoted(voteIDs, sessionID)}
-                &nbsp;- Voted
+                <a class="btn disabled song-attr-small prevent-default" href="#">
+                  <i class="icon-ok"></i>
+                </a>
               {else}
-                &nbsp;- <a class="prevent-default" href="/vote/{position}">Vote</a>
+                <a class="btn song-attr-small prevent-default" href="/vote/{position}">
+                  <i class="icon-ok"></i>
+                </a>
               {/}
-
+              
               {#if isAdmin}
-                &nbsp;- <a class="prevent-default" href="/moveup/{position}">Up</a>
-                &nbsp;- <a class="prevent-default" href="/movedown/{position}">Down</a>
-                &nbsp;- <a class="prevent-default" href="/remove/{position}">Remove</a>
+                <button class="btn dropdown-toggle song-attr-small" data-toggle="dropdown">
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu right admin-options">
+                  <li>
+                    <a class="prevent-default" href="/moveup/{position}">
+                      <i class="icon-arrow-up"></i>Move Up
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a class="prevent-default" href="/movedown/{position}">
+                      <i class="icon-arrow-down"></i>Move Down
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a class="prevent-default" href="/remove/{position}">
+                      <i class="icon-remove"></i>Remove
+                    </a>
+                  </li>
+                </ul>
               {/}
-            </li>
+            </div>
+          </div>
           {/}
-        </ul>
       {/}
     </div>
 
