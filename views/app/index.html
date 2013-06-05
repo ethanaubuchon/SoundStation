@@ -51,8 +51,6 @@
 
   <div class="container">
     <div class="hero-unit">
-      <h1>SoundStation</h1>
-      <br />
       {#if currentSong}
         <p class="lead"><strong>Currently playing:</strong></p>
         <div class="btn-toolbar">
@@ -89,6 +87,8 @@
           {/}
           </p>
         {/}
+      {else}
+        <p class="lead"><strong>No Song Playing</strong></p>
       {/}
 
       {#if queue}
