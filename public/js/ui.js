@@ -8,6 +8,10 @@ $(document).click(function(event) {
     // SoundStation and should proceed normally
     target = $(event.target);
 
+    // If we clicked on an icon within an anchor, set the anchor as target
+    if (target.parent().hasClass('prevent-default'))
+      target = target.parent();
+
     var href = target.attr('href');
 
     if (target.is('a') && target.hasClass('prevent-default')) {
