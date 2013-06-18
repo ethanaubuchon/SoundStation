@@ -59,13 +59,6 @@
               {currentSong.title}<br />
               {#if currentSong.artist}{currentSong.artist}{/}
             </a>
-            <a class="btn disabled song-attr-medium prevent-default" href="#">
-              {#if equal(votes, 1)}
-                &nbsp;1 Vote
-              {else}
-                &nbsp;{votes} Votes
-              {/}
-            </a>
           </div>
         </div>
         {#if isAdmin}
