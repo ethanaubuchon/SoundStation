@@ -6,12 +6,14 @@
     <thead>
       <tr>
         <th>Album</th>
+        <th>Artist</th>
       </tr>
     </thead>
     <tbody>
       {#each albums}
         <tr>
           <td><a href="/album/{id}">{name}</a></td>
+          <td>{artist}</td>
         </tr>
       {/}
     </tbody>
