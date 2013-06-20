@@ -4,14 +4,14 @@
   "version": "0.0.1",
   "main": "./server.js",
   "dependencies": {
-    "derby": "*",
+    "derby": "0.3.19",
     "express": "3.x",
     "gzippo": ">=0.2.0",
     "lame": "*",
     "speaker": "*",
     "async": "0.2.8",
     "musicmetadata": "*",
-    "bagpipe": "*"
+    "bagpipe": "0.3.4"
   },
   "private": true
 }
