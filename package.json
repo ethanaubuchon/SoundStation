@@ -10,8 +10,7 @@
     "lame": "*",
     "speaker": "*",
     "async": "0.2.8",
-    "musicmetadata": "*",
-    "bagpipe": "0.3.4"
+    "musicmetadata": "*"
   },
   "private": true
 }
