@@ -6,12 +6,14 @@
     <thead>
       <tr>
         <th>Genre</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
       {#each genres}
         <tr>
           <td><a href="/genre/{id}">{name}</a></td>
+          <td><a href="/addAll/genre/{id}">Add All</a></td>
         </tr>
       {/}
     </tbody>

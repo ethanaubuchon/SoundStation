@@ -6,12 +6,14 @@
     <thead>
       <tr>
         <th>Artist</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
       {#each artists}
         <tr>
           <td><a href="/artist/{id}">{name}</a></td>
+          <td><a href="/addAll/artist/{id}">Add All</a></td>
         </tr>
       {/}
     </tbody>
