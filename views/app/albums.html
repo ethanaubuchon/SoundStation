@@ -7,7 +7,9 @@
       <tr>
         <th>Album</th>
         <th>Artist</th>
-        <th>Action</th>
+        {#if isAdmin}
+          <th>Action</th>
+        {/}
       </tr>
     </thead>
     <tbody>
@@ -15,9 +17,11 @@
         <tr>
           <td><a href="/album/{id}">{name}</a></td>
           <td>{artist}</td>
-          <td>
-            <a href="/addAll/album/{id}">Add All</a>
-          </td>
+          {#if isAdmin}
+            <td>
+              <a class="prevent-default" href="/addAll/album/{id}">Add All</a>
+            </td>
+          {/}
         </tr>
       {/}
     </tbody>
