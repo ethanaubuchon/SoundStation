@@ -18,7 +18,7 @@
 <Header:>
   <body>
   <ui:connectionAlert>
-  <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="topnav navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
         <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -26,7 +26,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="brand" href="#">SoundStation</a>
+        <img class="brand" src="/img/logo.png" alt="SoundStation">
         <div class="nav-collapse collapse">
           <ul class="nav">
             <li class="{{homePage}}"><a href="/">All Songs</a></li>
@@ -139,16 +139,22 @@
           {/}
       {/}
     </div>
+  </div><!-- /container -->
+  <div class="content-wrapper">
+    <div class="container">
 
 <Tail:>
-    <footer>
-      <small>
-        SoundStation on&nbsp;
-        <a href="https://github.com/ethanaubuchon/SoundStation">Github</a>
-      </small>
-    </footer>
 
-  </div><!-- /container -->
+      <footer>
+        <small>
+          SoundStation on&nbsp;
+          <a href="https://github.com/ethanaubuchon/SoundStation">Github</a>
+        </small>
+      </footer>
+    </div><!-- /container -->
+  </div><!-- /content-wrapper -->
+
+  
 
   <script src="/lib/jquery-1.9.1.min.js"></script>
   <script src="/lib/bootstrap.min.js"></script>

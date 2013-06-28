@@ -1,17 +1,45 @@
 @import "../base";
 
 body {
-  padding-top: 60px;
+  padding-top: 70px;
+  background: #292a2c;
 }
-.navbar-form input {
+.navbar-inner {
+  background: #9a9a9a url('/img/navbar.jpg') repeat-x;
+  border: 0;
+}
+.topnav .nav>li>a {
+  color: #444;
+  text-shadow: 0 1px 0 #ccc;
+}
+
+.topnav .nav>.active>a,
+.topnav .nav>.active>a:hover,
+.topnav .nav>.active>a:focus {
+  background: #8a8a8a url('/img/navbar-active.jpg') repeat-x;
+  color: #ddd;
+  text-shadow: 0 1px 0 #000;
+}
+.topnav .navbar-form input {
   margin-right: 10px;
 }
 .hero-unit {
   font-size: 100%;
   padding: 40px;
+  background: #3c3e41;
+  color: #ccc;
+  text-shadow: 0 1px 0 #000;
 }
-.hero-unit h1 {
-  font-size: 40px;
+.hero-unit a, 
+.hero-unit a:hover, 
+.hero-unit a:focus, 
+.hero-unit a:active {
+  color: #ddd;
+}
+
+.content-wrapper {
+  background: #eaeaea;
+  padding: 20px;
 }
 
 .btn-group .song-attr, 
@@ -65,6 +93,10 @@ body {
 @media (max-width: 979px) {
   body {
     padding-top: 0px;
+  }
+  .nav-collapse .navbar-form, .nav-collapse .navbar-search {
+    border-top: #bbb 1px solid;
+    border-bottom: #bbb 1px solid;
   }
 }
 

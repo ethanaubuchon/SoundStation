@@ -3,7 +3,7 @@ SoundStation
 
 Local network based music player and organizer controlled from a browser or phone. Built with [Node.js](http://nodejs.org/) and [Derby](http://derbyjs.com/). Can be used by DJs, bar owners, and party hosts to allow guests to request/queue songs from their music library.
 
-![screenshot](http://danielstjules.com/soundstation/screenshot.gif)
+![screenshot](http://danielstjules.com/soundstation/screenshot.jpg)
 
 Installation Requirements
 -------------------------
