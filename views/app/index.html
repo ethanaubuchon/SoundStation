@@ -162,3 +162,15 @@
 
   </body>
   </html>
+
+<pagination:>
+  {log(@pages)}
+  {#if @pages}
+    <div class="pagination">
+      <ul>
+        {#each @pages}
+          <li><a href="{path}{this}/">{{this}}</li>
+        {/}
+      </ul>
+    </div>
+  {/}

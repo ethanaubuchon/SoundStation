@@ -2,6 +2,7 @@
   SoundStation - Home
 
 <Body:>
+  <app:pagination pages="{paginate-pages(songs, 200)}" currentPage="{page}">
   <table class="table table-hover table-striped">
     <thead>
       <tr>
@@ -14,7 +15,7 @@
       </tr>
     </thead>
     <tbody>
-      {#each songs}
+      {#each paginate-array(songs, page, 200)}
         <tr>
           <td>{{id}}</td>
           <td>{title}</td>
@@ -31,3 +32,12 @@
       {/}
     </tbody>
   </table>
+
+  <!-- Temporary, due to a possible partial bug in our version of Derby -->
+  <div class="pagination">
+    <ul>
+      {#each paginate-pages(songs, 200)}
+        <li><a href="/{{this}}/">{{this}}</li>
+      {/}
+    </ul>
+  </div>
