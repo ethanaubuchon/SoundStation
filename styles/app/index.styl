@@ -1,138 +1,134 @@
-@import "../base";
+@import "../base"
 
-body {
-  padding-top: 70px;
-  background: #292a2c;
-}
-.topnav {
-  -moz-box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
-  -webkit-box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
-  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
-}
-.topnav .navbar-inner {
-  background: #9a9a9a url('/img/navbar.jpg') repeat-x;
-  border: 0;
-}
-.topnav .nav>li>a {
-  color: #444;
-  text-shadow: 0 1px 0 #ccc;
-}
+body
+  padding-top 70px
+  background #292a2c
+
+.topnav
+  -moz-box-shadow 0 0 5px 5px rgba(0,0,0,0.5)
+  -webkit-box-shadow 0 0 5px 5px rgba(0,0,0,0.5)
+  box-shadow 0 0 5px 5px rgba(0,0,0,0.5)
+
+.topnav .navbar-inner
+  background #9a9a9a url('/img/navbar.jpg') repeat-x
+  border 0
+
+.topnav .nav>li>a
+  color #444
+  text-shadow 0 1px 0 #ccc
 
 .topnav .nav>.active>a,
 .topnav .nav>.active>a:hover,
-.topnav .nav>.active>a:focus {
-  background: #8a8a8a url('/img/navbar-active.jpg') repeat-x;
-  color: #ddd;
-  text-shadow: 0 1px 0 #000;
-}
-.topnav .navbar-form input {
-  margin-right: 10px;
-}
-.hero-unit {
-  font-size: 100%;
-  padding: 40px;
-  background: #3c3e41;
-  color: #ccc;
-  text-shadow: 0 1px 0 #000;
-}
-.hero-unit a, 
-.hero-unit a:hover, 
-.hero-unit a:focus, 
-.hero-unit a:active {
-  color: #ddd;
-}
+.topnav .nav>.active>a:focus
+  background #8a8a8a url('/img/navbar-active.jpg') repeat-x
+  color #ddd
+  text-shadow 0 1px 0 #000
 
-.content-wrapper {
-  background: #eaeaea;
-  padding: 20px;
-}
+.topnav .navbar-form input
+  margin-right 10px
+
+.hero-unit
+  font-size 100%
+  padding 40px
+  background #3c3e41
+
+.hero-unit p
+  color #ccc
+  text-shadow 0 1px 0 #000
+
+.hero-unit p a, 
+.hero-unit p a:hover, 
+.hero-unit p a:focus, 
+.hero-unit p a:active
+  color #ddd
+
+.content-wrapper
+  background #eaeaea
+  padding 20px
 
 .btn-group .song-attr, 
 .btn-group .song-attr-medium,
-.btn-group .song-attr-small {
-  float: left;
-  display: block;
-  word-wrap: break-word;
-  overflow: hidden;
-  color: #000;
-  text-align: center;
-  font-weight: normal;
-  height: 40px;
-}
-.btn-group .song-attr {
-  line-height: 20px;
-  width: 180px;
-}
-.btn-group .song-attr-medium {
-  line-height: 40px;
-  width: 50px;
-}
-.btn-group .song-attr-small {
-  line-height: 40px;
-  width: 30px;
-}
-.btn-group button.song-attr-small {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  height: 50px;
-  width: 30px;
-}
+.btn-group .song-attr-small
+  float left
+  display block
+  word-wrap break-word
+  overflow hidden
+  color #000
+  text-align center
+  font-weight normal
+  height 40px
 
-.admin-options i {
-  margin-right: 15px;
-}
+.btn-group .song-attr
+  line-height 20px
+  width 180px
 
-.dropdown-menu.right {
-  left: auto;
-  right: 0px;
-}
-.dropdown-menu.right::before {
-  left: auto !important;
-  right: 9px;
-}
-.dropdown-menu.right::after {
-  left: auto !important;
-  right: 10px;
-}
+.btn-group .song-attr-medium
+  line-height 40px
+  width 50px
 
-@media (max-width: 979px) {
-  body {
-    padding-top: 0px;
-  }
-  .nav-collapse .navbar-form, .nav-collapse .navbar-search {
-    border-top: #bbb 1px solid;
-    border-bottom: #bbb 1px solid;
-  }
-}
+.btn-group .song-attr-small
+  line-height 40px
+  width 30px
 
-@media (max-width: 695px) {
-  .btn-group .song-attr{
-    font-size: 11px;
-    width: 110px;
-  }
-  .btn-group .song-attr-medium {
-    font-size: 11px;
-    width: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .btn-group .song-attr-small {
-    font-size: 11px;
-    width: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  .btn-group button.song-attr-small {
-    width: 25px;
-  }
-}
+.btn-group button.song-attr-small
+  padding-top 15px
+  padding-bottom 15px
+  height 50px
+  width 30px
 
-@media (min-width: 980px) {
-    tr.visible-desktop {
-        display:table-row !important;
-    }
+.admin-options i
+  margin-right 15px
+
+.dropdown-menu.right
+  left auto
+  right 0px
+
+.dropdown-menu.right::before
+  left auto !important
+  right 9px
+
+.dropdown-menu.right::after
+  left auto !important
+  right 10px
+
+// Show additional table columns when viewing on desktops
+
+@media (min-width: 980px)
+    tr.visible-desktop
+        display table-row !important
+    
     td.visible-desktop,
-    th.visible-desktop {
-        display:table-cell !important;
-    }
-}
+    th.visible-desktop
+        display table-cell !important
+
+// Reduce nav bar size for tablets
+
+@media (max-width: 979px)
+  body
+    padding-top 0px
+  
+  .nav-collapse .navbar-form, .nav-collapse .navbar-search
+    border-top #bbb 1px solid
+    border-bottom #bbb 1px solid
+
+// Reduce text and component sizes for lower resolution phones
+
+@media (max-width: 695px)
+  .btn-group .song-attr
+    font-size 11px
+    width 110px
+  
+  .btn-group .song-attr-medium
+    font-size 11px
+    width 40px
+    padding-left 10px
+    padding-right 10px
+  
+  .btn-group .song-attr-small
+    font-size 11px
+    width 15px
+    padding-left 5px
+    padding-right 5px
+  
+  .btn-group button.song-attr-small
+    width 25px
